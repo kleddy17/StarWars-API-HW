@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+
+//React Routers
+import{Route} from 'react-router-dom'
+
+// Components imports
+import Starship from './components/Starship'
+import Home from './components/Home'
+
+// CSS imports
+import "./css/App.css";
+
+const App = () => {
+
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+      <Route exact path ="/" component={Home}/> 
+      <Route path = "/:id" component={Starship}/>
+
+  </div>
   );
-}
+};
 
 export default App;
