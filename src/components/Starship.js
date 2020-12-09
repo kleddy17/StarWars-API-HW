@@ -21,6 +21,8 @@ console.log(starship)
     return ( 
     <div >
     <h2>{starship.name}</h2>
+    <h2>{starship.model}</h2>
+    <h2>{starship.hyperdrive_rating}</h2>
     </div>
     )
 }
